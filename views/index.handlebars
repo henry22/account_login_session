@@ -1,1 +1,31 @@
-<h1>You view this page {{views}} times</h1>
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+  <div class="card w-50">
+    <div class="card-header">
+      <h1 class="text-center">Account Login</h1>
+    </div>
+    <div class="card-body">
+      <form class="needs-validation" novalidate method="POST" action="/">
+        <div class="form-group row">
+          <div class="col">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="email" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Password" name="password" required>
+          </div>
+        </div>
+        {{#if isValidated}}
+        <div class="invalid-feedback d-block">
+          Username/Password 錯誤
+        </div>
+        {{/if}}
+        <div class="form-group row mt-4">
+          <div class="col text-center">
+            <button class="btn btn-primary" type="submit">Sign in</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
